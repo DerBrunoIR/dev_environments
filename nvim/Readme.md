@@ -1,8 +1,9 @@
 # What is this?
 This is a neovim containerized setup. 
-The folling features are inncluded:
+The following features are inncluded:
 - zsh, oh my zsh, starship 
 - git, tree, xclip, bat, autojump
+- zip, unzip, tar
 - gcc, make
 - nvim
 For more advanced setups the container represents a good base image.
