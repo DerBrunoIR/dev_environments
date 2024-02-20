@@ -4,6 +4,10 @@ ENV user docker
 ENV home /home/${user}
 ENV nvim_config_repo https://github.com/DerBrunoIR/nvim.git
 
+# enable utf-8 
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+
 # install utils
 RUN <<EOF 
 	apt update 
@@ -78,6 +82,7 @@ EOF
 
 COPY ./zshrc ${home}/.zshrc
 COPY ./starship.toml ${home}/.config/starship.toml
+COPY ./install_lsp_dependencies.sh ${home}/install_lsp_dependencies
 
 CMD [ "zsh" ]
 
