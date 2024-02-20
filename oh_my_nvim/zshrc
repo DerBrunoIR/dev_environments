@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 # My Configuration 
 #
-export PATH="$PATH:/opt/nvim-linux64/bin/:/home/$USER/.local/bin:/usr/local/go/bin"
+export PATH="$PATH:/opt/nvim-linux64/bin/:/home/$user/.local/bin:/usr/local/go/bin"
  alias e="nvim"
  . /usr/share/autojump/autojump.sh
  alias ev="find . -name activate -type f -exec './{} +;'"
