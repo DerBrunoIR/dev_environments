@@ -38,7 +38,7 @@ RUN <<EOF
 	# yes | sudo unminimize 
 
 	sudo apt install -y \
-		zsh git \
+		tmux zsh git \
 		clang make \
 		tree xclip bat autojump fd-find ripgrep mawk
 
@@ -84,7 +84,7 @@ EOF
 RUN <<EOF 
 	sudo apt install -y lua5.4 luarocks
 
-	lua -v || exit 1
+	lua5.4 -v || exit 1
 EOF
 
 # install nodejs, npm
@@ -146,7 +146,7 @@ RUN <<EOF
 EOF
 
 
-COPY ./zshrc ${home}/.zshrc
+COPY ./dotfiles/* ${home}/
 COPY ./starship.toml ${home}/.config/starship.toml
 
 # clear /tmp
